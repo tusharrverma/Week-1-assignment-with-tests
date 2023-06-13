@@ -8,7 +8,16 @@
 */
 
 function isAnagram(str1, str2) {
-
+  const arr1 = str1.toLowerCase().split("").sort().join("");
+  const sortedStr1 = arr1.toString().toUpperCase();
+  const arr2 = str2.toLowerCase().split("").sort().join("");
+  const sortedStr2 = arr2.toString().toUpperCase();
+  if (sortedStr1 === sortedStr2) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 module.exports = isAnagram;
